@@ -29,10 +29,12 @@ const templates = {
 
 
 function showModal(type) {
-    console.log('ldjfalksdfjalkj')
-  
-  modalContainer.innerHTML = type;
-  modalOverlay.classList.remove('hidden');
+  document.querySelector('button').disabled = true
+  setTimeout(() => {
+    modalContainer.innerHTML = type
+    modalOverlay.classList.remove('hidden')
+    document.querySelector('button').disabled = false
+  }, 1500)
 }
 
 function showCards(a, b) {
@@ -66,7 +68,8 @@ document.querySelector('button').addEventListener('click', e => {
     document.getElementById('userScore').textContent = userScore
     document.getElementById('computerScore').textContent = computerScore
 
+
     if (computerScore === userScore && userScore === 3) showModal(templates.draw)
-    else if (userScore === 3) showModal(templates.win)
-    else if (computerScore === 3) showModal(templates.lose)
+      else if (userScore === 3) showModal(templates.win)
+      else if (computerScore === 3) showModal(templates.lose)
 })
