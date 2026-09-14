@@ -36,14 +36,14 @@ function showModal(type) {
 }
 
 function showCards(a, b) {
-    document.getElementById('userCard').src = `./u-${a}.svg`
-    document.getElementById('computerCard').src = `./c-${b}.svg`
+    document.getElementById('user').innerHTML = `<img src='img/u_${a}.svg'></img>`
+    document.getElementById('computer').innerHTML = `<img src='img/c_${b}.svg'></img>`
 }
 
 function closeModal() {
     document.getElementById('userScore').textContent = 0
     document.getElementById('computerScore').textContent = 0
-  modalOverlay.classList.add('hidden')
+  modalOverlay.classList.add('hidden');
 }
 
 
