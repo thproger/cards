@@ -36,8 +36,8 @@ function showModal(type) {
 }
 
 function showCards(a, b) {
-    document.getElementById('userCard').src = `img/u-${a}.svg`
-    document.getElementById('computerCard').src = `img/c-${b}.svg`
+    document.getElementById('userCard').src = `https://thproger.github.io/cards/img/u-${a}.svg`
+    document.getElementById('computerCard').src = `https://thproger.github.io/cards/img/c-${b}.svg`
 }
 
 function closeModal() {
