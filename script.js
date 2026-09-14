@@ -36,14 +36,14 @@ function showModal(type) {
 }
 
 function showCards(a, b) {
-    document.getElementById('userCard').src = `https://thproger.github.io/cards/img/u-${a}.svg`
-    document.getElementById('computerCard').src = `https://thproger.github.io/cards/img/c-${b}.svg`
+    document.getElementById('userCard').src = `./u-${a}.svg`
+    document.getElementById('computerCard').src = `./c-${b}.svg`
 }
 
 function closeModal() {
     document.getElementById('userScore').textContent = 0
     document.getElementById('computerScore').textContent = 0
-  modalOverlay.classList.add('hidden');
+  modalOverlay.classList.add('hidden')
 }
 
 
