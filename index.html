@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гра — Більше число</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white min-h-screen flex items-center justify-center p-4">
+  <div class="bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-10 shadow-2xl max-w-lg w-full text-center">
+    <h1 class="text-2xl sm:text-3xl font-bold mb-2 text-indigo-400">Гра «Більше число»</h1>
+    <p class="text-slate-400 text-sm mb-8">Гра триває до 3 перемог</p>
+    <div class="grid grid-cols-2 gap-4 sm:gap-8 mb-8 items-center">
+      <div class="flex flex-col items-center gap-4">
+        <span class="font-semibold text-lg sm:text-xl text-slate-200 truncate max-w-[130px]" id="username">User</span>
+        <div class="bg-sky-500 text-slate-900 font-extrabold text-xl px-6 py-2 rounded-xl shadow-md min-w-[70px]" id="userScore">
+          0
+        </div>
+        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-yellow-400 border-4 border-yellow-500 flex items-center justify-center shadow-lg overflow-hidden p-2" id="userNumber">
+          <img src="img/u_2.svg" alt="" id="userCard">
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <span class="font-semibold text-lg sm:text-xl text-slate-200">Computer</span>
+        <div class="bg-sky-500 text-slate-900 font-extrabold text-xl px-6 py-2 rounded-xl shadow-md min-w-[70px]" id="computerScore">
+          0
+        </div>
+        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-yellow-400 border-4 border-yellow-500 flex items-center justify-center shadow-lg overflow-hidden p-2" id="computerNumber">
+          <img src="img/c_9.svg" alt="" id="computerCard">
+        </div>
+      </div>
+
+    </div>
+    <form class="flex flex-col items-center gap-4">
+      <button 
+        type="submit" 
+        class="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-900 font-black text-xl rounded-2xl shadow-lg shadow-emerald-500/20 transition-all duration-150 cursor-pointer"
+      >
+        Generate
+      </button>
+    </form>
+  </div>
+
+  <!-- --------------------------------------------------------- -->
+
+  <div id="modal-overlay" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 z-50 hidden">
+    <div class="bg-slate-800 border border-slate-700 rounded-3xl p-8 sm:p-10 shadow-2xl max-w-sm w-full text-center flex flex-col items-center transform transition-all scale-100">
+      <form class="w-full">
+        <button 
+          type="submit" 
+          class="w-full py-3.5 px-6 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white font-bold text-lg rounded-xl shadow-lg shadow-indigo-600/30 transition-all duration-150 cursor-pointer"
+        >
+          Спробувати ще раз
+        </button>
+      </form>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
